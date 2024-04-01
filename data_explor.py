@@ -58,10 +58,6 @@ country_names = []
 for country in country_list:
     country_names.append(country['country'])
 
-
-
-#for country in country_names:
-#    country_df = merged_data.filter(merged_data.country == country)
-#    country_df.toPandas().to_csv(f'./data/by_country/{country}',sep=',',index=False)
-
-#merged_data.toPandas().to_csv(r'./data/merged_data.csv',sep=',',index=False)
+for country in country_names:
+    country_df = merged_data.filter(merged_data.country == country)
+    country_df.toPandas().to_csv(f'./data/by_country/{country}',sep=',',index=False)
